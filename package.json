@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "18.16.0"
+  },
   "dependencies": {
     "@types/node": "20.1.7",
     "@types/react": "18.2.6",
@@ -17,11 +20,13 @@
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "feather-icons": "^4.29.0",
+    "formik": "^2.2.9",
     "next": "13.4.2",
     "next-compose-plugins": "^2.2.1",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.62.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
   },

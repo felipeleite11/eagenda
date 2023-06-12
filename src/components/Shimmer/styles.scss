@@ -1,0 +1,28 @@
+@keyframes shimmer {
+	from {
+		background-position: -1000px 0;
+	}
+
+	to {
+		background-position: 1000px 0;
+	}
+}
+
+@keyframes fullView {
+	100% {
+		width: 100%;
+	}
+}
+
+.wrapper {
+	width: 0px;
+	animation: fullView 0.5s forwards linear;
+}
+
+.animate {
+	animation: shimmer 3s;
+	animation-iteration-count: infinite;
+	background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+	background-size: 1000px 100%;
+	@apply rounded-sm;
+}
