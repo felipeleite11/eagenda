@@ -1,8 +1,24 @@
+export interface FooterPartnerProps {
+	description: string
+	link: string
+}
+
+export interface FooterLinkProps {
+	description: string
+	link: string
+	icon: string
+}
+
 export interface CustomerProps {
 	id?: number
 	name: string
 	logo: string
 	description: string
+	phone: string
+	email: string
+	address: string
+	partners: FooterPartnerProps[]
+	links: FooterLinkProps[]
 }
 
 export interface ProfileProps {

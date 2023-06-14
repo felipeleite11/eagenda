@@ -4,19 +4,19 @@ import { useEffect, useState } from "react"
 import { Card } from "@/components/Card"
 import { Shimmer } from "@/components/Shimmer"
 
+import { get, urls } from "../utils/fetch"
+
 export default function Agendamento() {
-	const [data, setData] = useState(null)
+	const [schedule, setSchedule] = useState(null)
 
-	async function loadData() {
-		await new Promise((r) => setTimeout(r, 2000)).then(() => {})
-
-		setData({
-			description: 'CARREGADO'
-		})
+	async function loadSchedule() {
+		const response = await get(urls.schedule)
+		
+		setSchedule(response)
 	}
 
 	useEffect(() => {
-		loadData()
+		loadSchedule()
 	}, [])
 
 	return (
@@ -26,8 +26,8 @@ export default function Agendamento() {
 				description="Lorem ipsum dolor sit amet consectetur."
 				className="animate__animated animate__fadeIn"
 			>
-				{data ? (
-					<h1 className="text-3xl">{data.description}</h1>
+				{schedule ? (
+					<h1 className="text-3xl">{`${schedule.length} itens`}</h1>
 				) : (
 					<Shimmer />
 				)}

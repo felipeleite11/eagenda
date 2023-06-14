@@ -20,8 +20,6 @@ export function GlobalProvider({ children }: GlobalProviderProps) {
 	async function loadCustomer() {
 		const response = await get(urls.customer)
 
-		console.log('response', response)
-
 		setCustomer(response)
 	}
 
